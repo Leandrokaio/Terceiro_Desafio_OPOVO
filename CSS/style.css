@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    background: linear-gradient(44deg,rgb(1, 2, 15) 100%, rgba(0, 0, 0, 1) 50%)
+}
+
+.form-container{
+    max-width: 450px;
+    padding: 1rem;
+}
+
+.container-inputs{
+    display: grid;
+    gap: .8rem;
+}
+
+.btn{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+p{
+    font-size: .8rem;
+    opacity: 50%;
+}
+
+label{
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+input::placeholder{
+    font-size: .8rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
