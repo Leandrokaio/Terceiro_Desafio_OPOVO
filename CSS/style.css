@@ -12,18 +12,47 @@ body{
 }
 
 .form-container{
-    max-width: 450px;
+    max-width: 490px;
     padding: 1rem;
 }
 
 .container-inputs{
     display: grid;
+    grid-template-columns: repeat(10, 1fr);
     gap: .8rem;
+}
+
+.cep-info{
+    grid-column: span 3;
+}
+
+.location{
+    grid-column: span 7;
+}
+
+.address{
+    grid-column: span 8;
+}
+
+.uf{
+    grid-column: span 2;
+}
+
+.complement{
+    grid-column: span 7;
+}
+
+.state{
+    grid-column: span 3;
 }
 
 .btn{
     width: 100%;
     margin-top: 1.5rem;
+}
+
+.neighborhood{
+    grid-column: span 10;
 }
 
 p{
