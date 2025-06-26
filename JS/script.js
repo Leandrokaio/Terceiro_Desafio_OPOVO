@@ -8,35 +8,25 @@ const ufInput = document.querySelector("#uf");
 const complementInput = document.querySelector("#complement");
 const stateInput = document.querySelector("#state");
 const neighborhoodInput = document.querySelector("#neighborhood");
-const formInputs = document.querySelector("[data-input]")
 const btnInput = document.querySelector("#btnInput");
 
-// Iniciando validação do CEP
-// cepInput.addEventListener("keypress", (e) => {
-//     const onlyNumbers = /^[0-9]+$/;
-//     const key = String.fromCharCode(e.keyCode);
 
-//     // Aparecer apenas números
-//     if(!onlyNumbers.test(key)){
-//         e.preventDefault();
-//         return;
-//     }
-// })
+const consultarCep = async (cep) =>{
+    const apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
 
-// Captar e garantir os 8 digitos do CEP
-cepInput.addEventListener("Keyup", (e) =>{
-    const inputValue = e.target.value;
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data =>{
+        cepValue.value = data.cep;
+        locationInput.value = data.localidade;
+        neighborhoodInput.value = data.bairro;
+        addressInput.value = data.logradouro;
+        ufInput.value = data.uf;
+        complementInput.value = data.complemento
+        stateInput.value = data.estado;
+    })
 
-    if(inputValue.length === 8){
-        getAddress(inputValue);
-    }
-})
-
-// Consumir o CEP na API
-const getAddress = async (cep) => {
-    console.log(cep);
 }
-
 
 
 
