@@ -12,14 +12,14 @@
 <body class="d-flex align-items-center py-4 bg-body-tertiary h-100">
     <main class="w-100 m-auto d-flex flex-column form-container">
 
-        <form action="#" class="form-container rounded-4 bg-secondary-subtle p-4">
+        <form action="#" class="form-container rounded-4 bg-secondary-subtle p-4" id="form">
             <div class="title">
                 <h3 class="fs-4 text-light">CEP Deliver</h3>
                 <p class="subtitle fw-regular">Insira seu CEP e descubra suas informações</p>
             </div>
             <div class="input-cep d-flex flex-column">
                 <label for="cep-input" class="mb-1 text-light fw-regular form-label">Insira seu CEP</label>
-                <input type="number" name="cep-input" id="cep-input" class="form-control" placeholder="Digite seu CEP" minlength="8" maxlength="8" required>
+                <input type="number" name="cep-input" id="cep-input" class="form-control" minlength="8" maxlength="8" placeholder="Digite seu CEP" required>
             </div>
             <button class="btn btn-outline-light" id="btnInput">Buscar CEP</button>
         </form>
@@ -32,7 +32,7 @@
 
                 <div class="cep-info d-flex flex-column ">
                     <label for="cep-info" class="mb-1 text-light">CEP</label>
-                    <input type="number" name="cep-info" id="cep-info" class="form-control" placeholder="CEP" data-input>
+                    <input type="text" name="cep-info" id="cep-info" class="form-control" placeholder="CEP" data-input>
                 </div>
 
                 <div class="location d-flex flex-column">
